@@ -14,4 +14,7 @@ with (Controller) switch (argument0) {
     case "interp"          : {interpolation=!interpolation}break
     case "toggle grid"     : {grid=!grid}break
     case "toggle crosshair": {crosshair=!crosshair}break
+
+    case "smooth": {smooth=!smooth}break
+    case "closed": {closed=!closed}break
 }

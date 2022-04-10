@@ -15,3 +15,8 @@ button_actions
 save_path
 show_prefs
 pop_undo
+textfield_set
+rect
+load_path
+file_text_open_read_safe
+draw_loader

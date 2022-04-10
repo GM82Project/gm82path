@@ -35,7 +35,7 @@ applies_to=self
 */
 focus=position_meeting(mouse_wx,mouse_wy,id)
 
-if (down!=0 && focus && !active && (!extended || extended_instancedata) && !(gray)) {
+if (down!=0 && focus && !active && !(gray)) {
     //activate textfield
     with (TextField) textfield_actions()
     active=1

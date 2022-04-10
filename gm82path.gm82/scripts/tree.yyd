@@ -1,3 +1,4 @@
+|load_path
 |save_path
 |show_prefs
 |create
@@ -16,3 +17,7 @@
 |button_held
 |draw_button_ext
 |drawtooltip
+|textfield_set
+|rect
+|file_text_open_read_safe
+|draw_loader

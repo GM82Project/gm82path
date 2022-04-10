@@ -26,22 +26,8 @@ if (object_index==Button) {
     checked=0
     if (type==1) {
         switch (action) {
-            case "overlap check": {checked=overlap_check}break
-            case "tile overlap check": {checked=tile_overlap_check}break
-            case "room persist": {checked=roompersistent}break
-            case "room clear": {checked=clearview}break
-
-            case "clear bg": {checked=clearscreen}break
-            case "bg visible": {checked=bg_visible[bg_current]}break
-            case "bg fore": {checked=bg_is_foreground[bg_current]}break
-            case "bg tileh": {checked=bg_tile_h[bg_current]}break
-            case "bg tilev": {checked=bg_tile_v[bg_current]}break
-            case "bg stretch": {checked=bg_stretch[bg_current]}break
-
-            case "enable views": {checked=vw_enabled}break
-            case "view visible": {checked=vw_visible[vw_current]}break
-
-            case "chunk crop": {checked=chunkcrop}break
+            case "smooth": {checked=smooth}break
+            case "closed": {checked=closed}break
         }
         up=!down
     }
@@ -80,18 +66,15 @@ if (object_index==Button) {
 }
 
 if (object_index==TextField) {
-    if (extended && !extended_instancedata) col=global.col_main
+    if (type==1) {if (gray) col=global.col_main else col=real(text)}
     else {
-        if (type==1) {if (gray) col=global.col_main else col=real(text)}
+        if (active) col=$ffffff
         else {
-            if (active) col=$ffffff
-            else {
-                if (type==0 || type==2) {
-                    if (gray) col=global.col_main
-                    else col=$c0c0c0
-                } else {
-                    col=$c0c0c0
-                }
+            if (type==0 || type==2) {
+                if (gray) col=global.col_main
+                else col=$c0c0c0
+            } else {
+                col=$c0c0c0
             }
         }
     }

@@ -1,6 +1,11 @@
 globalvar tty,width,height,mouse_wx,mouse_wy,mousein;
 globalvar theme,buttontex,themebutton;
 globalvar interpolation;
+globalvar pathname,smooth,closed;
+
+pathname="path"
+smooth=false
+closed=true
 
 draw_set_font(fntCode)
 draw_set_circle_precision(8)
@@ -36,6 +41,8 @@ if (theme==2) {
 }
 
 load_theme()
+
+load_path()
 
 width=max(min_width,min(width,min_width+64+160*2))
 height=max(min_height,min(height,min_height+64+64))
