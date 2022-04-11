@@ -15,6 +15,6 @@ with (Controller) switch (argument0) {
     case "toggle grid"     : {grid=!grid}break
     case "toggle crosshair": {crosshair=!crosshair}break
 
-    case "smooth": {smooth=!smooth}break
-    case "closed": {closed=!closed}break
+    case "smooth": {smooth=!smooth path_set_kind(path,smooth)}break
+    case "closed": {closed=!closed path_set_closed(path,closed)}break
 }

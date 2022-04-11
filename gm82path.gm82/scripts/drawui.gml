@@ -1,3 +1,8 @@
+draw_le_path()
+
+//this is where the room space ends and the hud space starts================================================
+d3d_set_projection_ortho(0,0,width,height,0)
+
 tooltiptext=""
 tty=0
 
@@ -10,9 +15,11 @@ rect(0,0,160,height,global.col_main,1)
 rect(160,0,statusw,32,global.col_main,1)
 draw_button_ext(160,32,statusw,height-64,0,noone)
 
-draw_button_ext(0,64,160,100,1,noone)
+//path data
+draw_button_ext(0,64,160,160,1,noone)
 
 draw_text(8,128,"Precision:")
+draw_text(8,160,"Room:")
 
 
 //draw statusbar

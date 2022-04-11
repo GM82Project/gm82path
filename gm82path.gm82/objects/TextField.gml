@@ -51,6 +51,12 @@ if (down!=0 && focus && !active && !(gray)) {
     if (type==2 || type==3) {
         active=0
     }
+    if (action=="precision") {
+        text=string(show_menu("1|2|3|4|5|6|7|8",precision-1)+1)
+        textfield_actions()
+        active=0
+    }
+
     /*
     if (action=="view follow") {
         N_Menu_ShowPopupMenu(window_handle(),objmenu,window_get_x()+mouse_wx,window_get_y()+mouse_wy,0)

@@ -30,8 +30,15 @@ i.action="precision"
 i.w=36
 i.basealt="precision"
 i.maxlen=4
-i.tagmode=4
 textfield_set("precision",4)
+
+i=instance_create(8,184,TextField)
+i.action="room"
+i.w=144
+i.basealt="room"
+i.maxlen=12
+textfield_set("room",roomname)
+
 
 with (Button) {
     if (object_index==Button && type==1) {

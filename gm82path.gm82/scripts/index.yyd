@@ -20,3 +20,5 @@ rect
 load_path
 file_text_open_read_safe
 draw_loader
+draw_le_path
+draw_room

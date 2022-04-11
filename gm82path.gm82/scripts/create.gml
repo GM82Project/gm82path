@@ -1,7 +1,7 @@
 globalvar tty,width,height,mouse_wx,mouse_wy,mousein;
 globalvar theme,buttontex,themebutton;
-globalvar interpolation;
-globalvar pathname,smooth,closed;
+globalvar interpolation,zoom,zooming;
+globalvar pathname,smooth,closed,precision,length,pointnum,roomname;
 
 pathname="path"
 smooth=false
@@ -44,11 +44,13 @@ load_theme()
 
 load_path()
 
-width=max(min_width,min(width,min_width+64+160*2))
-height=max(min_height,min(height,min_height+64+64))
+if (pointnum) {
+    width=max(min_width,min(width,right-left+64+160))
+    height=max(min_height,min(height,bottom-top+64+64))
+    xgo=(left+right)/2-160/2 ygo=(top+bottom)/2
+    zoom=max(1,(right-left)/(width-160),(bottom-top+64)/(height-64))
+}
 
-xgo=width/2 ygo=height/2
-zoom=max(1,(width)/(width-320),(height+64)/(height-64))
 zoomgo=zoom
 
 window_set_size(width,height)
