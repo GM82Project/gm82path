@@ -24,7 +24,7 @@ if (resizecount<10) {
 
 mouse_wx=window_mouse_get_x()
 mouse_wy=window_mouse_get_y()
-mousein=(point_in_rectangle(mouse_wx,mouse_wy,160,32,width-160,height-32))
+mousein=(point_in_rectangle(mouse_wx,mouse_wy,160,32,width,height-32))
 
 //zooming
 if (mousein) {

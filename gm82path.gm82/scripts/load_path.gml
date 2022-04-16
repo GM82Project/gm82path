@@ -39,6 +39,8 @@ smooth=real(ds_map(map,"connection"))
 closed=real(ds_map(map,"closed"))
 precision=real(ds_map(map,"precision"))
 roomname=ds_map(map,"background")
+gridx=real(ds_map(map,"snap_x"))
+gridy=real(ds_map(map,"snap_y"))
 
 path_set_closed(path,closed)
 path_set_precision(path,precision)
@@ -65,3 +67,4 @@ f2=file_text_open_read_safe(root+"paths\"+pathname+"\points.txt") if (f2) {do {s
 } until (file_text_eof(f2)) file_text_close(f2)}
 
 length=path_get_length(path)
+path_changed=1

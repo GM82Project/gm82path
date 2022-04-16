@@ -1,7 +1,9 @@
-globalvar tty,width,height,mouse_wx,mouse_wy,mousein;
+globalvar tty,width,height,mouse_wx,mouse_wy,fmx,fmy,mousein;
 globalvar theme,buttontex,themebutton;
-globalvar interpolation,zoom,zooming;
+globalvar interpolation,zoom,zooming,gridx,gridy;
 globalvar pathname,smooth,closed,precision,length,pointnum,roomname;
+globalvar click_priority,dragging,drag;
+globalvar model,path_changed;
 
 pathname="path"
 smooth=false
@@ -29,6 +31,9 @@ global.modified=0
 
 room_speed=maxfps
 room_caption="Game Maker 8.2 Path Editor"
+
+click_priority=ds_priority_create()
+model=d3d_model_create()
 
 dir="SOFTWARE\Game Maker\Version 8.2\Preferences\"
 theme=registry_read_dword(dir+"GM82CustomThemeIndex",0)

@@ -1,25 +1,29 @@
 +util
 	|file_text_open_read_safe
 	|rect
-|load_path
-|create
-|step
-|load_theme
-|update_view
-|step_windowzoom
-|step_leftmouse
-|createui
-|drawui
-|textfield_actions
-|button_actions
-|button_draw
-|button_held
-|draw_button_ext
-|drawtooltip
-|textfield_set
-|draw_loader
-|draw_room
-|draw_le_path
++load
+	|create
+	|createui
+	|load_theme
+	|load_path
++step
+	|step
+	|update_view
+	|step_windowzoom
+	|step_leftmouse
++buttons
+	|textfield_actions
+	|textfield_set
+	|button_actions
+	|button_held
+	|button_draw
+	|draw_button_ext
++draw
+	|drawtooltip
+	|draw_loader
+	|drawui
+	|draw_room
+	|draw_le_path
 +to be implemented
 	+undo
 		|pop_undo

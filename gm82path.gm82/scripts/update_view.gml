@@ -9,3 +9,6 @@ view_hport[0]=height
 
 global.mousex=mouse_x
 global.mousey=mouse_y
+
+fmx=floorto(global.mousex,gridx)
+fmy=floorto(global.mousey,gridy)
