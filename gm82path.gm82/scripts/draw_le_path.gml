@@ -39,7 +39,7 @@ if (path_changed) {
                 d3d_model_vertex_color(model,px+dx,py+dy,0,0,1)
             }
         }
-        d3d_model_primitive_end(model,)
+        d3d_model_primitive_end(model)
         d3d_model_primitive_begin(model,pr_trianglelist)
         for (p=0;p<length;p+=4) {
             if (p>0) {
@@ -95,7 +95,7 @@ if (path_changed) {
                 d3d_model_vertex_color(model,px+dx,py+dy,0,0,1)
             }
         }
-        d3d_model_primitive_end(model,)
+        d3d_model_primitive_end(model)
         d3d_model_primitive_begin(model,pr_trianglelist)
         for (p=0;p<pointnum+closed;p+=1) {
             if (p>0) {

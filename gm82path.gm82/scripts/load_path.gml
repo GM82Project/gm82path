@@ -12,7 +12,7 @@ if (parameter_count()) {
 
 if (dir="") {
     //this is for faster testing on my computer :)
-    if (working_directory!=program_directory) dir="C:\Stuff\github\renex-engine\paths\pPlatform1"
+    if (working_directory!=program_directory) dir="C:\Stuff\github\renex-engine\source\paths\pPlatform1"
     if (!file_exists(dir+"\path.txt")) {
         //shrug
         game_end()
@@ -35,12 +35,12 @@ var f,f2,str;
 
 map=ds_map_create()
 ds_map_read_ini(map,root+"paths\"+pathname+"\path.txt")
-smooth=real(ds_map(map,"connection"))
-closed=real(ds_map(map,"closed"))
-precision=real(ds_map(map,"precision"))
-roomname=ds_map(map,"background")
-gridx=real(ds_map(map,"snap_x"))
-gridy=real(ds_map(map,"snap_y"))
+smooth=real(dsmap(map,"connection"))
+closed=real(dsmap(map,"closed"))
+precision=real(dsmap(map,"precision"))
+roomname=dsmap(map,"background")
+gridx=real(dsmap(map,"snap_x"))
+gridy=real(dsmap(map,"snap_y"))
 
 path_set_closed(path,closed)
 path_set_precision(path,precision)
